@@ -18,8 +18,8 @@ module.exports = {
                 console.log(accessToken)
                 let token = jwt.sign({
                     id: accessToken.data.id,
-                    name: accessToken.data.name,
-                    email: accessToken.data.email
+                    name: accessToken.data.name
+                    // email: accessToken.data.email
                 }, process.env.jwt_secret)
 
                 res.status(200).json(token)

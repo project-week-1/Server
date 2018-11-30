@@ -16,8 +16,6 @@ class Controller {
             .translate(text, target)
             .then(results => {
                 const translation = results[0];
-                console.log(`Text: ${text}`);
-                console.log(`Translation: ${translation}`);
                 res.json({
                     translation
                 })
