@@ -6,8 +6,10 @@ const cors = require('cors')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var newsRouter = require('./routes/news');
 
 var app = express();
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -18,5 +20,6 @@ app.use(cors())
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/news', newsRouter)
 
 module.exports = app;
