@@ -4,6 +4,7 @@ class textspeechController{
 
     static speak(req,res){
         console.log(process.env.TOKENRSS)
+        console.log(req.body)
         const options = {
             url: 'http://api.voicerss.org/',
             method: "post",
