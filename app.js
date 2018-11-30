@@ -13,7 +13,6 @@ var newsRouter = require('./routes/news');
 
 var app = express();
 
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
