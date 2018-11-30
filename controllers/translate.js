@@ -12,7 +12,6 @@ class Controller {
 
         const text = req.body.text
         const target = req.body.target
-        
         translate
             .translate(text, target)
             .then(results => {
@@ -33,13 +32,13 @@ class Controller {
             projectId: projectId
         })
         translate
-           .getLanguages()
-           .then(data => {
-               res.json(data)
-           })
-           .catch(err => {
-               console.log(err)
-           })
+            .getLanguages()
+            .then(data => {
+                res.json(data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 }
 
